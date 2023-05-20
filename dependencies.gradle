@@ -1,7 +1,7 @@
 
 minecraft {
     mainLwjglVersion = 3
-    lwjgl3Version = "3.3.2"
+    lwjgl4Version = "4.0.1"
 }
 
 def addGtForTesting = false
@@ -21,7 +21,7 @@ dependencies {
     patchedMinecraft("org.apache.commons:commons-lang3:3.12.0")
 
     // Allow using Unsafe with newer javac versions
-    patchedMinecraft('me.eigenraven.java8unsupported:java-8-unsupported-shim:1.0.0')
+    patchedMinecraft('me.xinboshin.java8unsupported:java-8-unsupported-shim:1.0.0')
 
     shadowImplementation("jakarta.xml.bind:jakarta.xml.bind-api:3.0.1")
     shadowImplementation("jakarta.servlet:jakarta.servlet-api:6.0.0")
@@ -30,19 +30,19 @@ dependencies {
 
     runtimeOnlyNonPublishable('com.github.GTNewHorizons:NotEnoughItems:2.3.39-GTNH:dev')
     if (addGtForTesting) {
-        runtimeOnlyNonPublishable('com.github.GTNewHorizons:GT5-Unofficial:5.09.41.265:dev')
-        runtimeOnlyNonPublishable("com.github.GTNewHorizons:Applied-Energistics-2-Unofficial:rv3-beta-153-GTNH:dev")
-        runtimeOnlyNonPublishable("com.github.GTNewHorizons:Chisel:2.10.16-GTNH:dev")
-        runtimeOnlyNonPublishable("com.github.GTNewHorizons:ForestryMC:4.5.6:dev")
-        runtimeOnlyNonPublishable("com.github.GTNewHorizons:Railcraft:9.13.14:dev")
-        runtimeOnlyNonPublishable("com.github.GTNewHorizons:EnderIO:2.3.1.54:dev")
-        runtimeOnlyNonPublishable("com.github.GTNewHorizons:ProjectRed:4.7.9-GTNH:dev") { transitive = false }
-        runtimeOnlyNonPublishable("com.github.GTNewHorizons:MrTJPCore:1.1.4:dev")
-        runtimeOnlyNonPublishable("com.github.GTNewHorizons:ForgeMultipart:1.3.1:dev")
-        runtimeOnlyNonPublishable("com.github.GTNewHorizons:ForgeRelocation:0.0.3:dev")
+        runtimeOnlyNonPublishable('com.github.lib-core:GT5-Unofficial:5.09.41.265:dev')
+        runtimeOnlyNonPublishable("com.github.lib-core:Applied-Energistics-2-Unofficial:rv3-beta-153-GTNH:dev")
+        runtimeOnlyNonPublishable("com.github.lib-core:Chisel:2.10.16-GTNH:dev")
+        runtimeOnlyNonPublishable("com.github.lib-core:ForestryMC:4.5.6:dev")
+        runtimeOnlyNonPublishable("com.github.lib-core:Railcraft:9.13.14:dev")
+        runtimeOnlyNonPublishable("com.github.lib-core:EnderIO:2.3.1.54:dev")
+        runtimeOnlyNonPublishable("com.github.lib-core:ProjectRed:4.7.9-GTNH:dev") { transitive = false }
+        runtimeOnlyNonPublishable("com.github.lib-core:MrTJPCore:1.1.4:dev")
+        runtimeOnlyNonPublishable("com.github.lib-core:ForgeMultipart:1.3.1:dev")
+        runtimeOnlyNonPublishable("com.github.lib-core:ForgeRelocation:0.0.3:dev")
         reobfJarConfiguration group: 'curse.maven', name: 'cofh-core-69162', version: '2388750'
-        runtimeOnlyNonPublishable("com.github.GTNewHorizons:AppleCore:3.2.9:dev")
-        runtimeOnlyNonPublishable("com.github.GTNewHorizons:Hodgepodge:2.0.28:dev")
+        runtimeOnlyNonPublishable("com.github.lib-core:AppleCore:3.2.9:dev")
+        runtimeOnlyNonPublishable("com.github.lib-core:Hodgepodge:2.0.28:dev")
     }
     if (addReikaModsForTesting) {
         // DragonAPI
