@@ -34,4 +34,4 @@ jdk.dynalink/jdk.dynalink.beans=ALL-UNNAMED
 --add-opens
 java.sql.rowset/javax.sql.rowset.serial=ALL-UNNAMED
 -jar
-lwjgl3ify-forgePatches.jar
+lwjgl4-forgePatch.jar
