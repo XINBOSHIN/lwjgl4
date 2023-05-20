@@ -1,0 +1,16 @@
+{
+    "formatVersion": 1,
+    "name": "Forge-lwjgl3ify-Patches",
+    "uid": "me.eigenraven.lwjgl3ify.forgepatches",
+    "version": "${version}",
+    "order": 3,
+    "+jvmArgs": [
+        ${jvmArgs}
+    ],
+    "libraries": [
+        {
+            "name": "com.github.GTNewHorizons:lwjgl3ify:${version}:forgePatches",
+            "url": "http://jenkins.usrv.eu:8081/nexus/content/groups/public/"
+        }
+    ]
+}
